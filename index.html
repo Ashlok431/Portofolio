@@ -4,12 +4,12 @@
     <title>Ashlok Yadav Portfolio</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    
+
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
 
     <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
     <link rel="stylesheet" href="css/animate.css">
-    
+
     <link rel="stylesheet" href="css/owl.carousel.min.css">
     <link rel="stylesheet" href="css/owl.theme.default.min.css">
     <link rel="stylesheet" href="css/magnific-popup.css">
@@ -17,12 +17,10 @@
     <link rel="stylesheet" href="css/aos.css">
 
     <link rel="stylesheet" href="css/ionicons.min.css">
-    
+
     <link rel="stylesheet" href="css/flaticon.css">
     <link rel="stylesheet" href="css/icomoon.css">
     <link rel="stylesheet" href="css/style.css">
-
-
 
 <style>
 
@@ -43,19 +41,22 @@
   margin-left: 10px;
 }
 
-
-.skill-mf .progress {
-  /* background-color: #cde1f8; */
-  margin: .5rem 0 1.2rem 0;
-  border-radius: 0;
-  height: .7rem;
+/* Skill groups (replaces percentage bars) */
+.skill-mf .skill-group {
+  margin: .5rem 0 1rem 0;
 }
 
-.skill-mf .progress .progress-bar {
-  height: .7rem;
-  background-color: #ffbd39;
+.skill-mf .skill-group .skill-label {
+  display: block;
+  font-weight: 600;
+  color: #ffbd39;
 }
 
+.skill-mf .skill-group .skill-items {
+  display: block;
+  font-size: 14px;
+  line-height: 1.5;
+}
 
 /* Animation styles */
 #typing-animation {
@@ -70,7 +71,6 @@
 
 #typing-animation:before {
   content: "";
-  /* position: absolute; */
   top: 0;
   left: 0;
   width: 0;
@@ -80,26 +80,16 @@
 }
 
 @keyframes typing {
-  from {
-    width: 0;
-  }
-  to {
-    width: 100%;
-  }
+  from { width: 0; }
+  to { width: 100%; }
 }
 
 @keyframes typing-cursor {
-  from {
-    width: 5px;
-  }
-  to {
-    width: 0;
-  }
+  from { width: 5px; }
+  to { width: 0; }
 }
 
-
 /* project image zoom effect */
-
 .zoom-effect {
   overflow: hidden;
   transition: transform 0.3s ease-out;
@@ -109,14 +99,21 @@
   transform: scale(1.1);
 }
 
+/* Publications & certifications */
+.pub-list, .cert-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.pub-list li, .cert-list li {
+  margin-bottom: 1.2rem;
+}
 
 </style>
 
-
   </head>
   <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
-	  
-	  
+
     <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
 	    <div class="container">
 	      <a class="navbar-brand" href="index.html">Ashlok Yadav</a>
@@ -130,11 +127,13 @@
 	          <li class="nav-item"><a href="#about-section" class="nav-link"><span>About</span></a></li>
 	          <li class="nav-item"><a href="#resume-section" class="nav-link"><span>Resume</span></a></li>
 	          <li class="nav-item"><a href="#project-section" class="nav-link"><span>Projects</span></a></li>
+	          <li class="nav-item"><a href="#publications-section" class="nav-link"><span>Publications</span></a></li>
 	          <li class="nav-item"><a href="#contact-section" class="nav-link"><span>Contact</span></a></li>
 	        </ul>
 	      </div>
 	    </div>
 	  </nav>
+
 	  <section id="home-section" class="hero">
 		  <div class="home-slider  owl-carousel">
 	       <div class="slider-item ">
@@ -153,44 +152,34 @@
 						<span id="typing-animation"></span>
 
 						<script>
-
-						// Initialize the typing animation
 						const typingAnimationElement = document.getElementById('typing-animation');
 
-						// Create an array of typing text
 						const typingTexts = [
-						'Student  ',
-						'Cloud DevOps  ',
+						'AI Researcher  ',
+						'ML Engineer  ',
 						'Software Developer  ',
 						];
 
-						// Create a function to display the typing animation for a given text
 						function playTypingAnimation(text) {
-						// Loop through each character and add it to the element
 						for (let i = 0; i < text.length; i++) {
 							setTimeout(() => {
 							typingAnimationElement.textContent += text[i];
-							}, i * 200); // Increase the delay to slow down the typing animation
+							}, i * 200);
 						}
 
-						// Once the animation is complete, reset the text and start over
 						setTimeout(() => {
 							typingAnimationElement.textContent = '';
 							playTypingAnimation(typingTexts[(typingTexts.indexOf(text) + 1) % typingTexts.length]);
 						}, text.length * 200);
 						}
 
-						// Start the typing animation loop
 						playTypingAnimation(typingTexts[0]);
-
 						</script>
 
 						<br>
 						<br>
-			            <h2>A Software Developer</h2>
-						<!-- <h2 class="d-flex" style="margin-bottom: 0">With less than 1 years of experience</h2> -->
-						<!-- <br> -->
-			            <p><a href="https://www.linkedin.com/in/ashlok-yadav-800425253/" class="btn btn-primary py-3 px-4">LinkedIn</a> 
+			            <h2>AI Researcher | Machine Learning Engineer</h2>
+			            <p><a href="https://www.linkedin.com/in/ashlok-yadav-800425253/" class="btn btn-primary py-3 px-4">LinkedIn</a>
 							<a href="https://github.com/Ashlok431" class="btn btn-white btn-outline-white py-3 px-4">My works</a></p>
 		            </div>
 		          </div>
@@ -201,12 +190,10 @@
     </section>
 
 
-
     <section class="ftco-about img ftco-section ftco-no-pb" id="about-section">
     	<div class="container">
 			<div class="row">
 				<div class="row d-flex align-items-stretch">
-				<!-- <div class="row d-flex"> -->
 					<div class="col-md-6 col-lg-5 d-flex">
 						<div class="img-about img d-flex align-items-stretch">
 							<div class="overlay">
@@ -218,98 +205,78 @@
 									</div>
 									<!-- Details next to profile image -->
 									<div class="col-sm-6 col-md-7">
-    <div class="about-info">
-        <p><span class="title-s">Name:</span> <span>Ashlok Prasad Yadav</span></p>
-
-        <p><span class="title-s">Role:</span> <span>AI Researcher | Machine Learning Engineer</span></p>
-
-        <p><span class="title-s">Specialization:</span> <span>Artificial Intelligence, Explainable AI & Cybersecurity</span></p>
-
-        <p><span class="title-s">Location:</span> <span>Bara, Nepal</span></p>
-    </div>
-</div>
+									    <div class="about-info">
+									        <p><span class="title-s">Name:</span> <span>Ashlok Prasad Yadav</span></p>
+									        <p><span class="title-s">Role:</span> <span>AI Researcher | Machine Learning Engineer</span></p>
+									        <p><span class="title-s">Specialization:</span> <span>AI, Explainable AI &amp; Cybersecurity</span></p>
+									        <p><span class="title-s">Location:</span> <span>Bara, Nepal</span></p>
+									    </div>
+									</div>
+								</div>
 
 								<div class="skill-mf">
-									<p class="title-s">Skills</p>
-									<span>C</span> <span class="pull-right">95%</span>
-									<div class="progress">
-										<div class="progress-bar" role="progressbar" style="width: 95%;" aria-valuenow="95" aria-valuemin="0"
-											aria-valuemax="100"></div>
+									<p class="title-s">Technical Skills</p>
+
+									<div class="skill-group">
+										<span class="skill-label">Programming</span>
+										<span class="skill-items">Python, Java, SQL, JavaScript, C</span>
 									</div>
-									
-									<span>Python</span> <span class="pull-right">85%</span>
-									<div class="progress">
-										<div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0"
-											aria-valuemax="100"></div>
+									<div class="skill-group">
+										<span class="skill-label">AI Frameworks &amp; Libraries</span>
+										<span class="skill-items">TensorFlow, PyTorch, Scikit-learn, Keras, Hugging Face Transformers, FastAPI, Pandas, NumPy, OpenCV</span>
 									</div>
-									
-									<span>Java</span> <span class="pull-right">90%</span>
-									<div class="progress">
-										<div class="progress-bar" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0"
-											aria-valuemax="100"></div>
+									<div class="skill-group">
+										<span class="skill-label">AI &amp; Machine Learning</span>
+										<span class="skill-items">Supervised &amp; Unsupervised Learning, Deep Learning, Explainable AI (SHAP, LIME), Differential Privacy, Federated Learning, NLP, Predictive Analytics</span>
 									</div>
-									
-									<span>Full Stack Developer</span> <span class="pull-right">85%</span>
-									<div class="progress">
-										<div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0"
-											aria-valuemax="100"></div>
+									<div class="skill-group">
+										<span class="skill-label">Cloud &amp; MLOps</span>
+										<span class="skill-items">AWS (EC2, S3, Lambda), IBM Cloud (Watson Studio, Cloud Functions), Google Cloud Platform, Docker, Git, GitHub Actions, CI/CD, ML Pipelines, Model Serving, Linux</span>
 									</div>
-									
-									<span>Data Structure &amp; Algorithms</span> <span class="pull-right">80%</span>
-									<div class="progress">
-										<div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0"
-											aria-valuemax="100"></div>
+									<div class="skill-group">
+										<span class="skill-label">Cybersecurity</span>
+										<span class="skill-items">Intrusion Detection Systems, Network Security, Threat Analysis, Cisco Networking</span>
+									</div>
+									<div class="skill-group">
+										<span class="skill-label">Tools</span>
+										<span class="skill-items">Jupyter Notebook, VS Code, LaTeX</span>
 									</div>
 								</div>
 							</div>
 						</div>
 					</div>
-					
+
 					<div class="col-md-6 col-lg-7 pl-lg-5 pb-5">
 						<div class="row justify-content-start pb-3">
 							<div class="col-md-12 heading-section ftco-animate">
-								
+
 								<h1 class="big">About</h1>
 								<h2 class="mb-4">About Me</h2>
-								
-							<p>
-Hi there! My name is <strong>Ashlok Prasad Yadav</strong>, and I am a Computer Science Engineering graduate from <strong>Kalinga Institute of Industrial Technology (KIIT) University</strong>. I am passionate about <strong>Artificial Intelligence, Machine Learning, Explainable AI (XAI), Cybersecurity,</strong> and <strong>Cloud Computing</strong>.
 
-I have gained valuable experience through research, internships, and software development projects. I have co-authored <strong>Springer</strong> and <strong>Wiley</strong> research publications and developed AI-driven systems for network intrusion detection, predictive analytics, and privacy-preserving machine learning. These experiences have strengthened my technical, analytical, and problem-solving skills.
+								<p>
+Hi there! My name is <strong>Ashlok Prasad Yadav</strong>, and I am a research-oriented Computer Science undergraduate at <strong>Kalinga Institute of Industrial Technology (KIIT) University</strong>, pursuing a B.Tech (Honours) in Computer Science Engineering. My work focuses on <strong>Artificial Intelligence, Machine Learning, Explainable AI (XAI), Privacy-Preserving AI,</strong> and <strong>Cybersecurity</strong>.
+<br><br>
+I am a co-author of <strong>Springer</strong> and <strong>Wiley</strong> publications and have hands-on experience developing AI-driven systems for <strong>intrusion detection, predictive analytics,</strong> and <strong>privacy-preserving machine learning</strong> using Python, TensorFlow, and AWS. I have also built and deployed ML pipelines on IBM Cloud and developed full-stack web applications during internships.
+<br><br>
+Thank you for visiting my portfolio. I look forward to connecting and collaborating on research and software opportunities.
+								</p>
 
-My expertise includes <strong>Python, Java, Machine Learning, Deep Learning, TensorFlow, PyTorch, AWS, SQL,</strong> and <strong>Full-Stack Web Development</strong>. I enjoy building intelligent, secure, and scalable applications that solve real-world challenges.
-
-I am always eager to learn emerging technologies, contribute to innovative research, and develop impactful software solutions. My long-term goal is to build trustworthy AI systems and advance the future of intelligent computing.
-
-Thank you for visiting my portfolio. I look forward to connecting and collaborating on exciting opportunities.
-</p>
-								
 								<ul class="about-info mt-4 px-md-0 px-2">
-    <li class="d-flex"><span>Role:</span> <span>AI Researcher | Machine Learning Engineer</span></li>
-
-    <li class="d-flex"><span>Specialization:</span> <span>Artificial Intelligence, Explainable AI (XAI), Privacy-Preserving AI &amp; Cybersecurity</span></li>
-
-    <li class="d-flex"><span>Education:</span> <span>B.Tech (Honours) – Computer Science Engineering, KIIT University</span></li>
-
-    <li class="d-flex"><span>Programming:</span> <span>Python, Java, SQL, JavaScript, C</span></li>
-
-    <li class="d-flex"><span>AI &amp; ML:</span> <span>TensorFlow, PyTorch, Scikit-learn, NLP, Deep Learning</span></li>
-
-    <li class="d-flex"><span>Cloud &amp; DevOps:</span> <span>AWS, IBM Cloud, Docker, Git, GitHub Actions</span></li>
-
-    <li class="d-flex"><span>Interests:</span> <span>Research, AI Innovation, Open Source, Cloud Computing</span></li>
-</ul>
-									
+								    <li class="d-flex"><span>Role:</span> <span>AI Researcher | Machine Learning Engineer</span></li>
+								    <li class="d-flex"><span>Research Interests:</span> <span>AI, Machine Learning, Explainable AI (XAI), Privacy-Preserving AI, Cybersecurity, Cloud Computing, Predictive Analytics</span></li>
+								    <li class="d-flex"><span>Education:</span> <span>B.Tech (Honours) – Computer Science Engineering, KIIT University (GPA 7.93/10)</span></li>
+								    <li class="d-flex"><span>Programming:</span> <span>Python, Java, SQL, JavaScript, C</span></li>
+								    <li class="d-flex"><span>AI &amp; ML:</span> <span>TensorFlow, PyTorch, Scikit-learn, Keras, NLP, Deep Learning</span></li>
+								    <li class="d-flex"><span>Cloud &amp; MLOps:</span> <span>AWS, IBM Cloud, GCP, Docker, Git, GitHub Actions</span></li>
 								</ul>
 							</div>
 						</div>
 
-
 						<div class="counter-wrap ftco-animate d-flex mt-md-3">
 							<div class="text">
 								<p class="mb-4">
-									<span class="number" data-number="30">0</span> <span>+</span>
-									<span>&nbsp; Projects completed</span>
+									<span class="number" data-number="2">0</span>
+									<span>&nbsp; Research publications (Springer &amp; Wiley)</span>
 								</p>
 								<p><a href="https://www.linkedin.com/in/ashlok-yadav-800425253/" class="btn btn-primary py-3 px-3">LinkedIn</a></p>
 							</div>
@@ -321,8 +288,6 @@ Thank you for visiting my portfolio. I look forward to connecting and collaborat
     </section>
 
 
-
-	
   <section class="ftco-section ftco-no-pb" id="resume-section">
     <div class="container">
         <div class="row justify-content-center pb-5">
@@ -331,66 +296,65 @@ Thank you for visiting my portfolio. I look forward to connecting and collaborat
                 <h2 class="mb-4">Resume</h2>
 
                 <p>
-                    Research-oriented Computer Science Engineering graduate with hands-on experience in
-                    <strong>Artificial Intelligence, Machine Learning, Explainable AI (XAI), Cybersecurity,
-                    Cloud Computing,</strong> and <strong>Full-Stack Development</strong>. Co-author of
-                    <strong>Springer</strong> and <strong>Wiley</strong> research publications, with practical
-                    experience building AI-driven systems, scalable cloud applications, and intelligent software
-                    solutions using Python, Java, TensorFlow, PyTorch, AWS, and modern development frameworks.
+                    Research-oriented Computer Science undergraduate at KIIT University with research experience in
+                    <strong>Artificial Intelligence, Explainable AI (XAI), Cybersecurity,</strong> and
+                    <strong>Privacy-Preserving Machine Learning</strong>. Co-author of <strong>Springer</strong> and
+                    <strong>Wiley</strong> publications with hands-on experience developing AI-driven systems for
+                    intrusion detection, predictive analytics, and privacy-preserving machine learning using
+                    Python, TensorFlow, and AWS.
                 </p>
-
             </div>
         </div>
 
 		<div class="row justify-content-center">
-    <h1 class="big-4">Professional Experience</h1>
-    <div class="underline"></div>
-</div>
-<br>
-		
+		    <h1 class="big-4">Professional Experience</h1>
+		    <div class="underline"></div>
+		</div>
+		<br>
+
 		<div class="row">
-    <div class="col-md-6">
-        <div class="resume-wrap ftco-animate">
-            <span class="date">2024 – Present</span>
-            <h2>AI/ML Research Contributor</h2>
-            <span class="position">Kalinga Institute of Industrial Technology (KIIT) University</span>
-            <span class="mt-4">Bhubaneswar, India</span>
+		    <div class="col-md-6">
+		        <div class="resume-wrap ftco-animate">
+		            <span class="date">2024 – Present</span>
+		            <h2>AI/ML Research Contributor</h2>
+		            <span class="position">KIIT University</span>
+		            <span class="mt-4">Bhubaneswar, India</span>
+		            <ul class="mt-4">
+		                <li>Co-authored an accepted <strong>Springer</strong> conference paper on <strong>Privacy-Preserving and Bias-Aware Explainable AI (PPB-XAI)</strong>, integrating SHAP-based explainability, fairness-aware machine learning, and differential privacy techniques for trustworthy AI.</li>
+		                <li>Co-authored a research paper published in <strong>Engineering Reports (Wiley)</strong> on Adaptive Q-Wavelet Transform (AQWT) and Kalman Filtering for smart grid disturbance prediction and carbon emission analysis.</li>
+		                <li>Conducted research on explainable AI, privacy-preserving machine learning, and cybersecurity by developing and evaluating machine learning models on benchmark datasets using Python, Scikit-learn, and TensorFlow.</li>
+		            </ul>
+		        </div>
+		    </div>
 
-            <p class="mt-4">
-            <ul>
-                <li>Conducting research in <strong>Artificial Intelligence, Explainable AI (XAI), Privacy-Preserving Machine Learning, and Cybersecurity</strong>, focusing on developing trustworthy, interpretable, and scalable intelligent systems.</li>
+		    <div class="col-md-6">
+		        <div class="resume-wrap ftco-animate">
+		            <span class="date">Jan 2025 – Feb 2025</span>
+		            <h2>AI &amp; Cloud Intern</h2>
+		            <span class="position">Edunet Foundation &amp; IBM SkillsBuild</span>
+		            <span class="mt-4">Remote</span>
+		            <ul class="mt-4">
+		                <li>Designed and deployed end-to-end machine learning pipelines on <strong>IBM Cloud</strong> using Watson Studio and Cloud Object Storage, automating data preprocessing, model training, and inference workflows.</li>
+		                <li>Implemented serverless ML deployment using <strong>IBM Cloud Functions</strong>, improving pipeline scalability, reproducibility, and deployment efficiency.</li>
+		            </ul>
+		        </div>
+		    </div>
+		</div>
 
-                <li>Co-authored an accepted <strong>Springer LNNS</strong> conference paper on <strong>Privacy-Preserving and Bias-Aware Explainable AI (PPB-XAI)</strong>, integrating SHAP-based explainability, fairness-aware machine learning, and differential privacy.</li>
-
-                <li>Co-authored a <strong>Wiley Engineering Reports</strong> publication on AI-driven predictive analytics for smart grid disturbance prediction and carbon emission impact analysis.</li>
-
-                <li>Designed, developed, and evaluated machine learning models using <strong>Python, TensorFlow, PyTorch, and Scikit-learn</strong>, leveraging benchmark datasets to build secure, explainable, and high-performance AI solutions.</li>
-            </ul>
-            </p>
-        </div>
-    </div>
-</div>
-
-				<div class="col-md-6">
-    <div class="resume-wrap ftco-animate">
-        <span class="date">May 2026 – Oct 2026</span>
-        <h2>Full Stack Development Intern</h2>
-        <span class="position">Gags Digital Pvt. Ltd.</span>
-        <span class="mt-4">Kathmandu, Nepal</span>
-
-        <p class="mt-4">
-        <ul>
-            <li>Developed responsive and scalable full-stack web applications using <strong>JavaScript, RESTful APIs, MySQL, HTML5,</strong> and <strong>CSS3</strong>.</li>
-
-            <li>Designed and integrated frontend and backend components to improve application performance, responsiveness, and overall user experience.</li>
-
-            <li>Implemented new features, optimized existing modules, and resolved software defects by collaborating with cross-functional Agile development teams.</li>
-
-            <li>Built secure, maintainable, and user-centric web applications by following software engineering best practices and modern development standards.</li>
-        </ul>
-        </p>
-    </div>
-</div>
+		<div class="row">
+		    <div class="col-md-6">
+		        <div class="resume-wrap ftco-animate">
+		            <span class="date">May 2026 – Oct 2026</span>
+		            <h2>Full Stack Development Intern</h2>
+		            <span class="position">Gags Digital Pvt. Ltd.</span>
+		            <span class="mt-4">Kathmandu, Nepal</span>
+		            <ul class="mt-4">
+		                <li>Developed responsive full-stack web applications using <strong>JavaScript, RESTful APIs,</strong> and <strong>MySQL</strong>, optimizing frontend-backend integration to improve application performance and user experience.</li>
+		                <li>Implemented new features, resolved software defects, and collaborated with cross-functional teams in Agile development cycles to deliver scalable, maintainable, and user-friendly web applications.</li>
+		            </ul>
+		        </div>
+		    </div>
+		</div>
 
 		<br>
 		<br>
@@ -400,109 +364,119 @@ Thank you for visiting my portfolio. I look forward to connecting and collaborat
 			<div class="underline"></div>
 		</div>
 		<br>
-		
-			<div class="row">
-    			<div class="col-md-6">
-    				<div class="resume-wrap ftco-animate">
-    					<span class="date">2022-2026</span>
-    					<h2>Bachelor of Engineering</h2>
-    					<span class="position">Kalinga Institute of Industrial Technology University in Bhubaneswar, Odisha</span>
-    					<p class="mt-4">Grade: First class distinction.</p>
-    				</div>
-    			</div>
 
-    			<div class="col-md-6">
-    				<div class="resume-wrap ftco-animate">
-    					<span class="date">2018-2020</span>
-    					<h2>Higher Secondary School</h2>
-    					<span class="position">OM NATIONAL ACADEMY</span>
-    					<p class="mt-4">Grade: First class distinction.</p>
-    				</div>
+		<div class="row">
+			<div class="col-md-8">
+				<div class="resume-wrap ftco-animate">
+					<span class="date">Aug 2022 – May 2026</span>
+					<h2>Bachelor of Technology (Honours) in Computer Science Engineering</h2>
+					<span class="position">Kalinga Institute of Industrial Technology (KIIT University), Bhubaneswar, India</span>
+					<p class="mt-4">GPA: 7.93/10</p>
+					<p><strong>Relevant Coursework:</strong> Data Structures &amp; Algorithms, Artificial Intelligence, Machine Learning, Database Management Systems, Computer Networks, Operating Systems, Cloud Computing, Data Analytics.</p>
 				</div>
-    		</div>
+			</div>
+		</div>
 
-    		<div class="row justify-content-center mt-5">
-    			<div class="col-md-6 text-center ftco-animate">
-    				<p><a href="https://drive.google.com/drive/folders/1DllG6XV8VqMErQV_Cd0EOb9Mc_QTyK40" class="btn btn-primary py-4 px-5">Download CV</a></p>
-    			</div>
-    		</div>
-    	</div>
-    </section>
+		<div class="row justify-content-center mt-5">
+			<div class="col-md-6 text-center ftco-animate">
+				<p><a href="https://drive.google.com/drive/folders/1DllG6XV8VqMErQV_Cd0EOb9Mc_QTyK40" class="btn btn-primary py-4 px-5">Download CV</a></p>
+			</div>
+		</div>
+	</div>
+  </section>
 
-   
 
-    <section class="ftco-section" id="project-section">
+  <section class="ftco-section" id="project-section">
       <div class="container">
         <div class="row justify-content-center mb-5 pb-5">
           <div class="col-md-7 heading-section text-center ftco-animate">
             <h1 class="big big-2">Projects</h1>
             <h2 class="mb-4">Projects</h2>
-            <p>Below are the sample Sudoku Desktop Game Project, Sorting-Visualizer-master, File-Compression-master, Notepad-main & ATM-Simulator-System.</p>
+            <p>Selected AI and machine learning projects in intrusion detection, predictive maintenance, and healthcare.</p>
           </div>
         </div>
         <div class="row d-flex">
           <div class="col-md-4 d-flex ftco-animate">
           	<div class="blog-entry justify-content-end">
-              <a href="#"class="block-20 zoom-effect" style="background-image: url('images/proj_1.jpg');">
+              <a href="https://github.com/Ashlok431" class="block-20 zoom-effect" style="background-image: url('images/proj_1.jpg');">
               </a>
               <div class="text mt-3 float-right d-block">
-
-                <h3 class="heading"><a href="https://github.com/Ashlok431/sudoku-desktop-game-master">Sudoku Desktop Game Project: Demonstrating Proficiency in DSA and Software Development</a></h3>
-                <p>I designed and implemented a Sudoku desktop game as a part of my DSA project, showcasing my coding skills and algorithmic understanding. This project reflects my ability to create practical and enjoyable applications while strengthening my proficiency in data structures and algorithms.</p>
+                <span class="date">Jan 2025 – Apr 2025</span>
+                <h3 class="heading"><a href="https://github.com/Ashlok431">Machine Learning-Based Network Intrusion Detection System</a></h3>
+                <p>Designed an end-to-end NIDS using the CICIDS-2017, CICIDS-2018, and UNSW-NB15 benchmark datasets to classify normal and malicious traffic. Built a full ML pipeline covering preprocessing, feature engineering and selection, SMOTE class balancing, training, and hyperparameter tuning with Python, Scikit-learn, and TensorFlow. Evaluated Random Forest, SVM, Decision Tree, KNN, Logistic Regression, and MLP using Accuracy, Precision, Recall, F1-score, ROC-AUC, and Confusion Matrix, with Random Forest and SVM performing best for multiclass detection.</p>
               </div>
             </div>
           </div>
           <div class="col-md-4 d-flex ftco-animate">
           	<div class="blog-entry justify-content-end">
-              <a href="#" class="block-20 zoom-effect" style="background-image: url('images/proj_2.jpg');">
+              <a href="https://github.com/Ashlok431" class="block-20 zoom-effect" style="background-image: url('images/proj_2.jpg');">
               </a>
               <div class="text mt-3 float-right d-block">
-
-                <h3 class="heading"><a href="https://github.com/Ashlok431/Sorting-Visualizer-master">Sorting Visualizer Project: Real-time Illustration of Sorting Algorithms</a></h3>
-                <p>Sorting Visualizer: Witness Sorting Algorithms in Action. This project provides a user-friendly interface to observe real-time animations of sorting algorithms like Bubble Sort and Merge Sort, offering an educational and interactive experience. Explore the documentation for usage details and feel free to contribute under the specified license.</p>
+                <span class="date">Jul 2024 – Oct 2024</span>
+                <h3 class="heading"><a href="https://github.com/Ashlok431">Predictive Maintenance Analytics</a></h3>
+                <p>Designed a Random Forest classifier on the AI4I dataset (10,000+ samples, 5 failure modes) using Scikit-learn, with SHAP-based feature importance for interpretable fault diagnosis in industrial systems. Developed an explainable workflow to classify failure modes including heat dissipation, power, and tool wear failures.</p>
               </div>
             </div>
           </div>
           <div class="col-md-4 d-flex ftco-animate">
           	<div class="blog-entry">
-              <a href="#" class="block-20 zoom-effect" style="background-image: url('images/proj_3.jpg');">
+              <a href="https://github.com/Ashlok431" class="block-20 zoom-effect" style="background-image: url('images/proj_3.jpg');">
               </a>
               <div class="text mt-3 float-right d-block">
-
-                <h3 class="heading"><a href="https://github.com/Ashlok431/File-Compression-master">The project heading could be something like: "File Compression Master: Optimizing Data Storage and Transmission Efficiency."</a></h3>
-                <p>The project name, "File-Compression-master," suggests a file compression system or tool, with the term "master" implying a main or primary version of the project. To gather more details about its functionality and purpose, it's recommended to review the project's documentation, source code, or any accompanying information provided by the developers.</p>
+                <span class="date">Oct 2024 – Dec 2024</span>
+                <h3 class="heading"><a href="https://github.com/Ashlok431">Personalized AI Nutrition Chatbot</a></h3>
+                <p>Built an AI healthcare chatbot using Scikit-learn (K-Means clustering) and NLP to deliver personalized nutrition recommendations across 100+ food items, achieving 92% classification accuracy through Gini Index-based socioeconomic stratification. Designed an interpretable pipeline combining income-based user segmentation with NLP-driven dietary guidance.</p>
               </div>
             </div>
           </div>
         </div>
-	<br>
-		<!-- added justify-content-center to center align the last two projects -->
-		<div class="row d-flex justify-content-center">  
-			<div class="col-md-4 d-flex ftco-animate">
-				<div class="blog-entry justify-content-end">
-				<a href="#" class="block-20 zoom-effect" style="background-image: url('images/proj_4.jpg');">
-				</a>
-				<div class="text mt-3 float-right d-block">
-  
-				  <h3 class="heading"><a href="https://github.com/Ashlok431/Notepad-main">Notepad-main: Streamlined Text Editing Excellence</a></h3>
-				  <p>Notepad-main is a versatile and user-friendly text editor project designed for simplicity and efficiency. With its clean interface and essential features, it provides a seamless writing experience for users of all levels. The project focuses on lightweight design, making it a fast and responsive tool for quick note-taking and text editing. Notepad-main is open-source, fostering collaboration and continual improvement within the developer community.</p>
-				</div>
-			  </div>
-			</div>
-			<div class="col-md-4 d-flex ftco-animate">
-				<div class="blog-entry justify-content-end">
-				<a href="#" class="block-20 zoom-effect" style="background-image: url('images/proj_5.jpg');">
-				</a>
-				<div class="text mt-3 float-right d-block">
-  
-				  <h3 class="heading"><a href="https://github.com/Ashlok431/ATM-Simulator-System">Java-based ATM Simulator System: A Secure and User-Friendly Banking Solution</a></h3>
-				  <p>The ATM Simulator System, developed in Java, enables users to simulate common ATM transactions such as checking balances, withdrawing cash, depositing funds, and transferring between accounts, all within a secure and user-friendly interface.</p>
-				</div>
-			  </div>
-			</div>
-		 </div>
 	  </div>
-    </section>
+  </section>
+
+
+  <section class="ftco-section" id="publications-section">
+      <div class="container">
+        <div class="row justify-content-center mb-5 pb-3">
+          <div class="col-md-8 heading-section text-center ftco-animate">
+            <h1 class="big big-2">Research</h1>
+            <h2 class="mb-4">Research &amp; Publications</h2>
+          </div>
+        </div>
+
+        <div class="row justify-content-center">
+          <div class="col-md-10 ftco-animate">
+            <ul class="pub-list">
+              <li>
+                <h3>PPB-XAI: A Privacy-Preserving and Bias-Aware Explainable AI Framework</h3>
+                <p>Accepted, 7th International Conference on Frontiers in Computing and Systems (COMSYS 2026), Springer Lecture Notes in Networks and Systems (LNNS), 2026.</p>
+              </li>
+              <li>
+                <h3>Adaptive Q-Wavelet Transform and Kalman Filtering for Power Quality Disturbance Prediction and Carbon Emission Impact Analysis in Smart Grids</h3>
+                <p>Published in Engineering Reports (Wiley), 2026.</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="row justify-content-center mt-5 mb-3">
+          <div class="col-md-8 heading-section text-center ftco-animate">
+            <h2 class="mb-4">Certifications</h2>
+          </div>
+        </div>
+
+        <div class="row justify-content-center">
+          <div class="col-md-10 ftco-animate">
+            <ul class="cert-list">
+              <li><strong>Supervised Machine Learning: Regression and Classification</strong> — DeepLearning.AI &amp; Stanford University (Jan 2026)</li>
+              <li><strong>Foundations of Cybersecurity</strong> — Google Career Certificates (Jan 2026)</li>
+              <li><strong>Networking &amp; Network Security</strong> — Cisco Networking Academy (AICTE Virtual Internship, 2025)</li>
+              <li><strong>Emerging Technologies: AI &amp; Cloud</strong> — Edunet Foundation &amp; IBM SkillsBuild (AICTE, 2024)</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+  </section>
+
 
 	<section class="ftco-section ftco-no-pt ftco-no-pb ftco-counter img" id="section-counter">
       <div class="container">
@@ -510,53 +484,50 @@ Thank you for visiting my portfolio. I look forward to connecting and collaborat
           <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
             <div class="block-18">
               <div class="text">
-                <strong class="number" data-number="20">0</strong>
-                <span>Achievements</span>
+                <strong class="number" data-number="2">0</strong>
+                <span>Publications</span>
               </div>
             </div>
           </div>
           <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
             <div class="block-18">
               <div class="text">
-                <strong class="number" data-number="30">0</strong>
-                <span>Projects</span>
+                <strong class="number" data-number="3">0</strong>
+                <span>AI/ML Projects</span>
               </div>
             </div>
           </div>
           <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
             <div class="block-18">
               <div class="text">
-                <strong class="number" data-number="1000">0</strong>
-                <span>Mentored Students</span>
+                <strong class="number" data-number="2">0</strong>
+                <span>Internships</span>
               </div>
             </div>
           </div>
           <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
             <div class="block-18">
               <div class="text">
-                <strong class="number" data-number="500">0</strong>
-                <span>Cups of coffee</span>
+                <strong class="number" data-number="4">0</strong>
+                <span>Certifications</span>
               </div>
             </div>
           </div>
         </div>
       </div>
-	
+
 	  <div class="ftco-section ftco-hireme img margin-top" style="background-image: url(images/bg_1.jpg)">
-			<!-- <div class="container"> -->
-				<div class="row justify-content-center">
-					<div class="col-md-7 ftco-animate text-center">
-						<h2>More projects on<span> Github  </span> </h2>
-						<div class="heading"> <h4> I love to solve business problems &amp; uncover hidden data stories </h4>
-						<br>
-						<p><a href="https://github.com/Ashlok431" class="btn btn-primary py-3 px-5">GitHub</a></p>
-						</div>
+			<div class="row justify-content-center">
+				<div class="col-md-7 ftco-animate text-center">
+					<h2>More projects on<span> Github  </span> </h2>
+					<div class="heading"> <h4> Building trustworthy, explainable, and secure AI systems </h4>
+					<br>
+					<p><a href="https://github.com/Ashlok431" class="btn btn-primary py-3 px-5">GitHub</a></p>
 					</div>
 				</div>
-			<!-- </div> -->
+			</div>
 		</div>
 	</section>
-
 
 
     <section class="ftco-section contact-section ftco-no-pb" id="contact-section">
@@ -576,7 +547,7 @@ Thank you for visiting my portfolio. I look forward to connecting and collaborat
           			<span class="icon-map-signs"></span>
           		</div>
           		<h3 class="mb-4">Address</h3>
-	            <p>Bhubaneshwar, India</p>
+	            <p>Mahagadhimai Municipality-07, Bara, Nepal</p>
 	          </div>
           </div>
           <div class="col-md-6 col-lg-3 d-flex ftco-animate">
@@ -585,7 +556,7 @@ Thank you for visiting my portfolio. I look forward to connecting and collaborat
           			<span class="icon-phone2"></span>
           		</div>
           		<h3 class="mb-4">Contact Number</h3>
-	            <p><a href="tel://8935941676">+918935941676</a></p>
+	            <p><a href="tel:+9779709117014">+977 9709117014</a></p>
 	          </div>
           </div>
           <div class="col-md-6 col-lg-3 d-flex ftco-animate">
@@ -594,7 +565,7 @@ Thank you for visiting my portfolio. I look forward to connecting and collaborat
           			<span class="icon-paper-plane"></span>
           		</div>
           		<h3 class="mb-4">Email Address</h3>
-	            <p><a href="mailto:ashlokyadav56@gmail.com">ashlokyadav00oo@gmail.com</a></p>
+	            <p><a href="mailto:ashlokyadav56@gmail.com">ashlokyadav56@gmail.com</a></p>
 	          </div>
           </div>
           <div class="col-md-6 col-lg-3 d-flex ftco-animate">
@@ -612,13 +583,14 @@ Thank you for visiting my portfolio. I look forward to connecting and collaborat
 			<br>
 			<div class="row justify-content-center">
 				<div class="col-md-7 ftco-animate text-center">
-					<h2>Have a<span> Question?  </span> <a href="#" class="btn btn-primary py-3 px-5">Click Here</a> </h2>
+					<h2>Have a<span> Question?  </span> <a href="mailto:ashlokyadav56@gmail.com" class="btn btn-primary py-3 px-5">Click Here</a> </h2>
 				</div>
 			</div>
 				<br>
 					<ul class="ftco-footer-social list-unstyled d-flex justify-content-center align-items-center mb-0">
 					  <li class="ftco-animate normal-txt">Find me on  </li>
-					  <li class="ftco-animate"><a href="https://www.linkedin.com/in/ashlok-yadav-800425253/"><span class="icon-linkedin"></span></a></li>  
+					  <li class="ftco-animate"><a href="https://www.linkedin.com/in/ashlok-yadav-800425253/"><span class="icon-linkedin"></span></a></li>
+					  <li class="ftco-animate"><a href="https://github.com/Ashlok431"><span class="icon-github"></span></a></li>
 					  <li class="ftco-animate"><a href="https://twitter.com/Ashlokyadav01"><span class="icon-twitter"></span></a></li>
 					  <li class="ftco-animate"><a href="https://www.facebook.com/ashlok.yadav.1?mibextid=ZbWKwL"><span class="icon-facebook"></span></a></li>
 				      <li class="ftco-animate"><a href="https://www.instagram.com/ashlok_yadv?igsh=eno2NTVwZjAxbDJo"><span class="icon-instagram"></span></a></li>
@@ -629,13 +601,11 @@ Thank you for visiting my portfolio. I look forward to connecting and collaborat
  </section>
 
 
- 
-	
     <footer class="ftco-footer ftco-section">
 		<div class="container">
 		  <div class="row">
 			<div class="col-md-12 text-center">
-  
+
 			  <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
 	Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart color-danger" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Ashlok</a>
 	<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
@@ -661,8 +631,8 @@ Thank you for visiting my portfolio. I look forward to connecting and collaborat
   <script src="js/aos.js"></script>
   <script src="js/jquery.animateNumber.min.js"></script>
   <script src="js/scrollax.min.js"></script>
-  
+
   <script src="js/main.js"></script>
-    
+
   </body>
 </html>
