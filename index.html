@@ -58,35 +58,40 @@
   line-height: 1.5;
 }
 
-/* Animation styles */
+/*======================================
+//--//-->   HERO FIXES
+======================================*/
+
+/* Typing text: JS types the letters, so no CSS width animation is needed */
 #typing-animation {
-  position: relative;
+  display: inline-block;
+  min-height: 40px;
   font-size: 30px;
   font-weight: bold;
-  color: rgb(255, 255, 255);
-  overflow: hidden;
+  color: #fff;
   white-space: nowrap;
-  animation: typing 3s steps(20, end) infinite;
 }
 
-#typing-animation:before {
-  content: "";
-  top: 0;
-  left: 0;
-  width: 0;
-  height: 100%;
-  background-color: #ccc;
-  animation: typing-cursor 0.5s ease-in-out infinite;
+/* Hero photo: transparent background so the dark page shows through */
+.hero .img,
+.slider-item .img {
+  background-color: transparent !important;
 }
 
-@keyframes typing {
-  from { width: 0; }
-  to { width: 100%; }
+/* Keep the hero text and menu above the photo column */
+.hero .text {
+  position: relative;
+  z-index: 5;
 }
 
-@keyframes typing-cursor {
-  from { width: 5px; }
-  to { width: 0; }
+.hero .text h2 {
+  font-size: 22px;
+  position: relative;
+  z-index: 5;
+}
+
+#ftco-navbar {
+  z-index: 1000;
 }
 
 /* project image zoom effect */
@@ -140,7 +145,7 @@
 	      	<div class="overlay"></div>
 	         <div class="container">
 	          <div class="row d-md-flex no-gutters slider-text align-items-end justify-content-end" data-scrollax-parent="true">
-	          	<!-- HERO PHOTO: images/hero.png -->
+	          	<!-- HERO PHOTO: images/hero.png (transparent PNG) -->
 	          	<div class="one-third js-fullheight order-md-last img" style="background-image:url(images/hero.png); background-size:cover; background-position:center top; background-repeat:no-repeat;">
 	          	 <div class="overlay"></div>
 	          	</div>
