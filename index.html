@@ -94,6 +94,10 @@
   z-index: 1000;
 }
 
+/*======================================
+//--//-->   PROJECTS
+======================================*/
+
 /* project image zoom effect */
 .zoom-effect {
   overflow: hidden;
@@ -102,6 +106,19 @@
 
 .zoom-effect:hover {
   transform: scale(1.1);
+}
+
+/* Keep all three project cards aligned: reserve room for a two-line title */
+#project-section .blog-entry .text .heading {
+  min-height: 3.2em;
+}
+
+/* Make sure the clickable image links behave like blocks and sit on top */
+#project-section .blog-entry .block-20 {
+  display: block;
+  position: relative;
+  z-index: 2;
+  cursor: pointer;
 }
 
 /* Publications & certifications */
@@ -402,39 +419,46 @@ Thank you for visiting my portfolio. I look forward to connecting and collaborat
           </div>
         </div>
         <div class="row d-flex">
+
+          <!-- Project 1 -->
           <div class="col-md-4 d-flex ftco-animate">
           	<div class="blog-entry justify-content-end">
-              <a href="https://github.com/Ashlok431" class="block-20 zoom-effect" style="background-image: url('images/proj_1.jpg');">
+              <a href="https://github.com/Ashlok431/Network-Intrusion-Detection-System" target="_blank" rel="noopener" class="block-20 zoom-effect" style="background-image: url('images/proj_1.jpg');" aria-label="Network Intrusion Detection System on GitHub">
               </a>
               <div class="text mt-3 float-right d-block">
                 <span class="date">Jan 2025 – Apr 2025</span>
-                <h3 class="heading"><a href="https://github.com/Ashlok431">Machine Learning-Based Network Intrusion Detection System</a></h3>
-                <p>Designed an end-to-end NIDS using the CICIDS-2017, CICIDS-2018, and UNSW-NB15 benchmark datasets to classify normal and malicious traffic. Built a full ML pipeline covering preprocessing, feature engineering and selection, SMOTE class balancing, training, and hyperparameter tuning with Python, Scikit-learn, and TensorFlow. Evaluated Random Forest, SVM, Decision Tree, KNN, Logistic Regression, and MLP using Accuracy, Precision, Recall, F1-score, ROC-AUC, and Confusion Matrix, with Random Forest and SVM performing best for multiclass detection.</p>
+                <h3 class="heading"><a href="https://github.com/Ashlok431/Network-Intrusion-Detection-System" target="_blank" rel="noopener">Machine Learning-Based Network Intrusion Detection System</a></h3>
+                <p>Designed an end-to-end NIDS on the CICIDS-2017, CICIDS-2018, and UNSW-NB15 benchmark datasets, with a full ML pipeline covering preprocessing, feature selection, SMOTE class balancing, and hyperparameter tuning in Python, Scikit-learn, and TensorFlow. Compared Random Forest, SVM, Decision Tree, KNN, Logistic Regression, and MLP using Accuracy, Precision, Recall, F1-score, and ROC-AUC; Random Forest and SVM performed best for multiclass detection.</p>
               </div>
             </div>
           </div>
+
+          <!-- Project 2 -->
           <div class="col-md-4 d-flex ftco-animate">
           	<div class="blog-entry justify-content-end">
-              <a href="https://github.com/Ashlok431" class="block-20 zoom-effect" style="background-image: url('images/proj_2.jpg');">
+              <a href="https://github.com/Ashlok431/Predictive-Maintenance-Analytics" target="_blank" rel="noopener" class="block-20 zoom-effect" style="background-image: url('images/proj_2.jpg');" aria-label="Predictive Maintenance Analytics on GitHub">
               </a>
               <div class="text mt-3 float-right d-block">
                 <span class="date">Jul 2024 – Oct 2024</span>
-                <h3 class="heading"><a href="https://github.com/Ashlok431">Predictive Maintenance Analytics</a></h3>
+                <h3 class="heading"><a href="https://github.com/Ashlok431/Predictive-Maintenance-Analytics" target="_blank" rel="noopener">Predictive Maintenance Analytics</a></h3>
                 <p>Designed a Random Forest classifier on the AI4I dataset (10,000+ samples, 5 failure modes) using Scikit-learn, with SHAP-based feature importance for interpretable fault diagnosis in industrial systems. Developed an explainable workflow to classify failure modes including heat dissipation, power, and tool wear failures.</p>
               </div>
             </div>
           </div>
+
+          <!-- Project 3 -->
           <div class="col-md-4 d-flex ftco-animate">
-          	<div class="blog-entry">
-              <a href="https://github.com/Ashlok431" class="block-20 zoom-effect" style="background-image: url('images/proj_3.jpg');">
+          	<div class="blog-entry justify-content-end">
+              <a href="https://github.com/Ashlok431/Personalized-AI-Nutrition-Chatbot" target="_blank" rel="noopener" class="block-20 zoom-effect" style="background-image: url('images/proj_3.jpg');" aria-label="Personalized AI Nutrition Chatbot on GitHub">
               </a>
               <div class="text mt-3 float-right d-block">
                 <span class="date">Oct 2024 – Dec 2024</span>
-                <h3 class="heading"><a href="https://github.com/Ashlok431">Personalized AI Nutrition Chatbot</a></h3>
+                <h3 class="heading"><a href="https://github.com/Ashlok431/Personalized-AI-Nutrition-Chatbot" target="_blank" rel="noopener">Personalized AI Nutrition Chatbot</a></h3>
                 <p>Built an AI healthcare chatbot using Scikit-learn (K-Means clustering) and NLP to deliver personalized nutrition recommendations across 100+ food items, achieving 92% classification accuracy through Gini Index-based socioeconomic stratification. Designed an interpretable pipeline combining income-based user segmentation with NLP-driven dietary guidance.</p>
               </div>
             </div>
           </div>
+
         </div>
 	  </div>
   </section>
